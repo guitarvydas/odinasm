@@ -1,5 +1,7 @@
 *~
 _*
+odinasm
+odinasm.dSYM
 .DS_Store*
 node_modules/*
 *.mov

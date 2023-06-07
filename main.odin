@@ -1,4 +1,6 @@
 package odinasm
+import "core:fmt"
+import "core:strings"
 
 pt0 :: proc (x, y : int) -> int {
   return x + y
@@ -24,6 +26,12 @@ pt5 :: proc (s : string) -> string {
   return s
 }
 
+// I don't understand the code generated for this ...
+pt6 :: proc (s : string) -> string {
+  new_s := strings.clone (s)
+  return new_s
+}
+
 main :: proc () {
   z0 : int = pt0 (65, 66)
   z1 : int = pt1 (65)
@@ -31,5 +39,6 @@ main :: proc () {
   z3 : []int = pt3 ([]int{65,66,67})
   z4 := pt4 ("abcdefghijklmn ABCDEFGHIJKLMN")
   z5 := pt5 ("abcdefghijklmn ABCDEFGHIJKLMN")
+  z6 := pt6 ("abcdefghijklmn ABCDEFGHIJKLMN")
 }
 
